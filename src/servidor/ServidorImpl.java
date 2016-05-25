@@ -59,7 +59,11 @@ public class ServidorImpl extends ServidorIntPOA{
 
     @Override
     public void enviarMensaje(String usuario, String mensaje) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        for (int i = 0; i < listaDeUsuarios.size(); i++) {
+            ClienteInt objcllbckAct;
+            objcllbckAct=listaDeUsuarios.get(i);
+            objcllbckAct.recibirMensaje(usuario, mensaje);
+        }
     }
 
     @Override

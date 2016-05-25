@@ -72,7 +72,7 @@ public class GUICliente extends javax.swing.JFrame {
 	private JLabel jlabelpuerto;
 	private JButton jButton1;
 	ServidorInt svrchat;        
-    ClienteInt objcllbck;
+        ClienteInt objcllbck;
 	String nombre;
 	int opin=0;
 
