@@ -358,18 +358,18 @@ public class GUICliente extends javax.swing.JFrame {
 
 							// Resuelve la referencia del objeto en el N_S
                             String name = "ServidorChat";
-                            svrchat = xxxxxxxIntHelper.narrow(ncRef.resolve_str(name));
+                            svrchat = ServidorIntHelper.narrow(ncRef.resolve_str(name));
 
 							// crea el objeto callback 
-                            xxxxxxImpl clienteCallbackImpl = new xxxxxxxImpl(this);
+                            ClienteImpl clienteCallbackImpl = new ClienteImpl(this);
 							
                             org.omg.CORBA.Object ref = rootpoa.servant_to_reference(clienteCallbackImpl);
                             
 							// obtiene la referencia del objeto callback
-                            objcllbck = xxxxxxxIntHelper.narrow(ref);
+                            objcllbck = ClienteIntHelper.narrow(ref);
 							
 							//registra el objcllbck el cual representa el cliente en el servidor de chat
-                            xxxxxxxx.registrarCliente(objcllbck, nombre);
+                            svrchat.registrarCliente(objcllbck, nombre);
 
                             
 

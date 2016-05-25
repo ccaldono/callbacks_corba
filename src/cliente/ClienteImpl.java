@@ -13,6 +13,7 @@ import sop_corba.ClienteIntPOA;
  */
 public class ClienteImpl extends ClienteIntPOA{
 
+    
     private GUICliente GUIC;
     
     public ClienteImpl(GUICliente GUIC)
